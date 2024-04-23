@@ -40,12 +40,10 @@ def main():
     bot_token 
     application = Application.builder().token(bot_token).build()
 
-    # Add command handlers
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("text_to_speech", text_to_speech))
     application.add_handler(CommandHandler("speech_to_text", speech_to_text))
 
-    # Start the Bot
     application.run_polling()
 
 if __name__ == '__main__':
